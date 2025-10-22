@@ -1,0 +1,71 @@
+/* styles.css - simples e limpo */
+:root{
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --text:#20232a;
+  --muted:#6b7280;
+  --accent:#1a73e8;
+  --accent-2:#0b5ed7;
+  --radius:10px;
+  --max-width:420px;
+}
+html,body{height:100%;}
+body{
+  margin:0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+  background: linear-gradient(180deg,#eef2ff 0%, var(--bg) 100%);
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.container{width:100%;padding:24px;box-sizing:border-box;display:flex;justify-content:center}
+.card{
+  width:100%;max-width:var(--max-width);background:var(--card);border-radius:var(--radius);box-shadow:0 6px 30px rgba(16,24,40,0.08);padding:24px;box-sizing:border-box;
+}
+h1{margin:0 0 8px 0;font-size:24px;font-weight:600;color:var(--text)}
+p{margin:0 0 16px 0;color:var(--muted);font-size:14px;line-height:1.6}
+.form label{display:block;margin-bottom:16px}
+.form span{display:block;font-size:13px;color:var(--muted);margin-bottom:6px;font-weight:500}
+.form input{
+  width:100%;
+  padding:10px 12px;
+  border-radius:8px;
+  border:1px solid #e6e9ef;
+  background:#fbfdff;
+  font-size:14px;
+  box-sizing:border-box;
+  outline:none;
+  transition:border-color 0.2s ease;
+}
+.form input:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(26,115,232,0.1)}
+.form-actions{display:flex;gap:8px;align-items:center;margin-top:16px;flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  background:var(--accent);
+  color:#fff;
+  padding:10px 16px;
+  border-radius:8px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  font-size:14px;
+  font-weight:500;
+  transition:all 0.2s ease;
+  white-space:nowrap;
+}
+.btn:hover{background:var(--accent-2);transform:translateY(-1px);box-shadow:0 4px 12px rgba(26,115,232,0.2)}
+.btn.small{padding:6px 12px;font-size:13px}
+.btn.outline{
+  background:transparent;
+  color:var(--accent);
+  border:1px solid var(--accent);
+}
+.btn.outline:hover{background:rgba(26,115,232,0.05)}
+.btn:active{transform:translateY(1px)}
+.muted{color:var(--muted);font-size:13px;margin-top:16px;text-align:center}
+.logged{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.profile{display:flex;flex-direction:column;align-items:center;gap:12px}
+.profile img{width:96px;height:96px;border-radius:999px;object-fit:cover;border:3px solid #fff;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+.actions{display:flex;justify-content:center;margin-top:18px}
+@media (max-width:480px){.container{padding:14px}.card{padding:18px}}

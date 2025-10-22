@@ -1,0 +1,17 @@
+{
+    "name": "dell/teste_tecnico",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "HenriqueZanchet",
+            "email": "henriquezmello@hotmail.com"
+        }
+    ],
+    "require": {
+        "google/apiclient": "^2.18"
+    }
+}
